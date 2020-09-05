@@ -93,6 +93,7 @@ img{
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
+  top : 6rem;
 }
 .section-title1::after{
   position: absolute;
@@ -431,6 +432,7 @@ img{
   }
   .contact__container{
     justify-items: center;
+    top : 50px;
   }
 }
 

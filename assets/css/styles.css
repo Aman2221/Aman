@@ -58,7 +58,7 @@ body{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     color: var(--text-color);
-    line-height: 1.4;
+    line-height: 1.3;
     background: #000;
 }
 h1,h2,p{
@@ -118,7 +118,7 @@ img{
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--first-color);
+    background-color: #000;
 }
 
 /*===== NAV =====*/
@@ -128,6 +128,7 @@ img{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background: #000;
 }
 @media screen and (max-width: 768px){
     .nav__menu{
@@ -180,7 +181,7 @@ img{
 /*===== HOME =====*/
 .home{
     position: relative;
-    background-color: var(--first-color);
+    background-color: #000;
     overflow: hidden;
 }
 .home__container{
@@ -211,7 +212,7 @@ img{
     bottom: 0;
 }
 .home__container img{
-    width: 50%;
+    width: 70%;
     height: 90%;
 }
 
@@ -479,8 +480,9 @@ img{
     .home__title{
         position: relative;
         top: 40px;
-        font-size: 1.7em;
-        color: var(--white-color);
+        font-size: 3.8em;
+        color: cyan;
         line-height: 1;
+        text-shadow: 3px 3px 5px rgba(255,0,0,0.8);
     }
 }

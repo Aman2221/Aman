@@ -11,7 +11,7 @@
 :root{
     --first-color: lime;
     --white-color: #FAFAFF;
-    --dark-color: #2A3B47;
+    --dark-color: #fff;
     --text-color: cyan;
 }
 
@@ -212,7 +212,7 @@ img{
     bottom: 0;
 }
 .home__container img{
-    width: 70%;
+    width: 40%;
     height: 90%;
 }
 
@@ -283,7 +283,7 @@ img{
 
 /* ===== PORTFOLIO =====*/
 .portfolio{
-    background-color: var(--white-color);
+    background-color: #000;
 }
 .portfolio__container{
     justify-items: center;
@@ -314,7 +314,7 @@ img{
     bottom: 0;
 }
 .portfolio__link-name{
-    color: var(--dark-color);
+    color: #000;
 }
 
 /* ===== CONTACT =====*/
@@ -484,5 +484,12 @@ img{
         color: cyan;
         line-height: 1;
         text-shadow: 3px 3px 5px rgba(255,0,0,0.8);
+    }
+    .home__container img{
+        width: 70%;
+        height: 90%;
+    }
+    .nav:nth-child(1){
+        text-align: center;
     }
 }

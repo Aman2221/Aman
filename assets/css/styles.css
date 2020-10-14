@@ -270,8 +270,9 @@ img{
     margin-right: var(--mb-2);
     margin-bottom: var(--mb-3);
     padding: .25rem .5rem;
-    background-color: var(--white-color);
+    background : linear-gradient(black,#333);
     border-radius: .25rem;
+    font-weight: 500;
 }
 .skills__name:hover{
     background-color: var(--first-color);
@@ -358,7 +359,7 @@ img{
 
 /* ===== FOOTER=====*/
 .footer{
-    background-color: var(--dark-color);
+    background : #000;
 }
 .footer__container{
     row-gap: 2rem;
@@ -370,9 +371,11 @@ img{
 }
 .footer__link{
     padding: .25rem 0;
+    font-weight: 500;
 }
 .footer__link:hover{
-    color: var(--first-color);
+    color: lime;
+    transition: .5s;
 }
 .footer__social{
     font-size: 1.4rem;
@@ -400,6 +403,7 @@ img{
 
     .nav{
         height: calc(var(--header-height) + 1rem);
+        color: cyan;
     }
     .nav__list{
         display: flex;

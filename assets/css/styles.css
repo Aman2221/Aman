@@ -1,23 +1,23 @@
 /*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 /*===== VARIABLES CSS =====*/
 :root{
     --skler-height: 3rem;
-    --font-medium: 500;
+    --font-medium: 300;
 }
 
 /*===== Colores =====*/
 :root{
-    --first-color: #66d157;
+    --first-color: lime;
     --white-color: #FAFAFF;
     --dark-color: #2A3B47;
-    --text-color: #697477;
+    --text-color: cyan;
 }
 
 /*===== Fuente y tipografia =====*/
 :root{
-    --body-font: 'Montserrat', sans-serif;
+    --body-font: 'Poppins', sans-serif;
     --big-font-size: 6.25rem;
     --h2-font-size: 1.25rem;
     --normal-font-size: .938rem;
@@ -58,7 +58,8 @@ body{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.4;
+    background: #000;
 }
 h1,h2,p{
     margin: 0;
@@ -126,6 +127,7 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
 }
 @media screen and (max-width: 768px){
     .nav__menu{
@@ -207,7 +209,10 @@ img{
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 295px;
+}
+.home__container img{
+    width: 50%;
+    height: 90%;
 }
 
 /* ===== ABOUT =====*/
@@ -236,6 +241,7 @@ img{
 }
 .about__text{
     margin-bottom: var(--mb-4);
+    font-weight: 100;
 }
 .about__profession{
     display: block;
@@ -467,5 +473,14 @@ img{
     .bd-grid{
         margin-left: auto;
         margin-right: auto;
+    }
+}
+@media screen and (max-width : 468px){
+    .home__title{
+        position: relative;
+        top: 40px;
+        font-size: 1.7em;
+        color: var(--white-color);
+        line-height: 1;
     }
 }

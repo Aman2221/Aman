@@ -250,10 +250,11 @@ img{
 }
 .about__container p{
     font-size: 18px;
-    line-height: 22px;
+    line-height: 30px;
 }
 .about__social-icon{
     font-size: 1.4rem;
+    font-weight: 100;
     margin: 0 var(--mb-1);
 }
 .about__social-icon:hover{

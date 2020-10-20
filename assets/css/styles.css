@@ -1,6 +1,5 @@
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
 /*===== VARIABLES CSS =====*/
 :root{
     --skler-height: 3rem;
@@ -48,6 +47,14 @@
 /*===== BASE =====*/
 *,::before,::after{
     box-sizing: border-box;
+}
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000 url(./Preloader.gif) no-repeat center ;
+    background-size: cover;
+    z-index: 1000;
 }
 html{
     scroll-behavior: smooth;

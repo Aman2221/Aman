@@ -3,7 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <!-- ==== Dark-Mode ===-->
+        <!--
+        <style>
+        @media(prefers-color-scheme:dark){
+            body{
+                background: #fff;
+            }
+            .l-header{
+                background-color: #fff;
+            }
+            .home{
+                background: #fff;
+            }
+        }
+        </style>-->
         <!-- ===== CSS ===== -->
         <link rel="stylesheet" href="assets/css/styles.css">
         <!-- ===== BOX ICONS ===== -->
@@ -14,7 +28,8 @@
 
         <title>| Aman Singh |</title>
     </head>
-    <body>
+    <body onload="fun()">
+        <div id="loading"></div>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">

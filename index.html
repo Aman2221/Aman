@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- ==== Dark-Mode ===-->
+        <!--
+        <style>
+        @media(prefers-color-scheme:dark){
+            body{
+                background: #fff;
+            }
+            .l-header{
+                background-color: #fff;
+            }
+            .home{
+                background: #fff;
+            }
+        }
+        </style>-->
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== Fevicon ===== -->
+        <link rel="icon" href="assets/img/favicon.ico">
+        <!-- ===== Font Awsome ===== -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+        <!-- ===== Textillate Js Animations ===== -->
+        <link rel="stylesheet" href="./assets/css/animate.css">
+        <title>| Aman Singh |</title>
+    </head>
+    <body onload="fun()">
+        <div id="loading"></div>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">| AMAN SINGH |</a>
+                </div>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    <h1 class="home__title"><span>HE</span><br>LLO.</h1>
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+                    </div>
+                    <img src="assets/img/img.png" alt="" class="home__img">
+                </div>
+            </section>
+            
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/Myimg.JPG" alt="">
+                    </div>
+
+                    <div>
+                        <h2 class="about__subtitle">I'm Aman Singh </h2>
+                        <span class="about__profession">Web designer</span>
+                        <p class="about__text">
+                            An intermediate Programmer based in Mumbai, India. I'm currently a third year student at Dnyanasadhana College, University of Mumbai pursuing a degree in Information and Technology.                      </p>
+                        <div class="about__social">
+                            <a href="https://www.linkedin.com/in/aman-singh-6a81281b3/" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                            <a href="https://github.com/Aman2221" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100012875318770" class="about__social-icon"><i class='bx bxl-facebook-circle'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">
+                    <div class="skills__box">
+                        <h3 class="skills__subtitle">Development</h3>
+                        <span class="skills__name">Html</span>
+                        <span class="skills__name">Css</span>
+                        <span class="skills__name">SCSS</span>
+                        <span class="skills__name">Javascript</span>
+                        <span class="skills__name">React</span>
+                        
+                        <h3 class="skills__subtitle">Design</h3>
+                        <span class="skills__name">Paint 3D</span>
+                        <span class="skills__name">Photoshop</span>
+                        <span class="skills__name">Adobe XD</span>
+
+                        <h3 class="skills__subtitle">Tools</h3>
+                        <span class="skills__name">GitHub</span>
+                        <span class="skills__name">Visual Studio</span>
+                        <span class="skills__name">Node</span>
+                        <span class="skills__name">NPM</span>
+                    </div>
+
+                    <div class="skills__img">
+                        <img src="assets/img/SKILL.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== PORTFOLIO =====-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section-title">Portfolio</h2>
+
+                <div class="portfolio__container bd-grid">
+                    <div class="portfolio__img">
+                        <a href="https://github.com/Aman2221?tab=repositories" class="portfolio__link-name">
+                            <img src="assets/img/work1.png" alt="">
+                            <h3 class="skills__subtitle">3D ANIMATION</h3>
+                            <div class="portfolio__link">
+                                View details
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <a href="https://github.com/Aman2221?tab=repositories" class="portfolio__link-name">
+                            <img src="assets/img/work2.png" alt="">
+                            <h3 class="skills__subtitle">JAVASCRIPT TODO</h3>
+                            <div class="portfolio__link">
+                                View details
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <a href="https://github.com/Aman2221?tab=repositories" class="portfolio__link-name">
+                            <img src="assets/img/work3.png" alt="">
+                            <h3 class="skills__subtitle">LANDING PAGE</h3>
+                            <div class="portfolio__link">
+                                View details
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <a href="https://github.com/Aman2221?tab=repositories" class="portfolio__link-name">
+                            <img src="assets/img/work4.png" alt="">
+                            <h3 class="skills__subtitle">LOGIN PAGE</h3>
+                            <div class="portfolio__link">
+                                View details
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <a href="https://github.com/Aman2221?tab=repositories" class="portfolio__link-name">
+                            <img src="assets/img/work5.png" alt="">
+                            <h3 class="skills__subtitle">OLD PORTFOLIO</h3>
+                            <div class="portfolio__link">
+                            View details
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <a href="https://github.com/Aman2221?tab=repositories" class="portfolio__link-name">
+                            <img src="assets/img/work6.png" alt="">
+                            <h3 class="skills__subtitle">PRODUCT CARD</h3>
+                            <div class="portfolio__link">
+                                View details
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">EMAIL</h3>
+                        <span class="contact__text">as562770@gmail.com</span>
+
+                        <h3 class="contact__subtitle">PHONE</h3>
+                        <span class="contact__text">+917678022139</span>
+
+                        <h3 class="contact__subtitle">ADRESS</h3>
+                        <span class="contact__text">India</span>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <input type="text" placeholder="Name" class="contact__input">
+                            <input type="mail" placeholder="Email" class="contact__input">
+                        </div>
+
+                        <textarea name="" id="" cols="0" rows="10" placeholder="Description" class="contact__input"></textarea>
+
+                        <input type="submit" value="SEND" class="contact__button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">Aman Singh</h2>
+                    <p class="footer__text">I'm Aman Singh and this is my personal Portfolio</p>
+                </div>
+
+                <div class="footer__data">
+                    <h2 class="footer__title">EXPLORE</h2>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#skills" class="footer__link">Skills</a></li>
+                        <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                        <li><a href="#Contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__data">
+                    <h2 class="footer__title">FOLLOW</h2>
+                    <a href="https://www.facebook.com/profile.php?id=100012875318770" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://www.instagram.com/aman_singhhhhhh/" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://twitter.com/Aman23398618" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+                </div>
+
+                <div class="upArrow">
+                    <a href="#home"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+        
+        <!--===== jQuery and Textillate =====-->
+        <script src="assets/js/jquery-3.5.1.js"></script>
+        <script src="assets/js/jquery.lettering.js"></script>
+        <script src="assets/js/jquery.textillate.js"></script>
+        <script>
+              $('.about__text').textillate();
+        </script>
+    </body>
+</html>

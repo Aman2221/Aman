@@ -1,5 +1,6 @@
 
-Personal Portfolio
+Pages :
+
 <img src="https://github.com/Aman2221/AmanPortfolio.github.io/blob/master/assets/img/PortfolioHomePage.png" />
 
 <img src="https://github.com/Aman2221/AmanPortfolio.github.io/blob/master/assets/img/AboutPage.png" />

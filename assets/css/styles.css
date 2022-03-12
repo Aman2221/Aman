@@ -411,6 +411,9 @@ img {
   color: var(--white-color);
   margin-bottom: var(--mb-2);
 }
+.footer__data > ul > li {
+  margin-top: 10px;
+}
 .footer__link {
   padding: 0.25rem 0;
   font-weight: 500;

@@ -78,4 +78,3 @@ sr.reveal('.contact__button', {delay: 600})
 function fun(){
     document.getElementById("loading").style.display="none";
 }
-

@@ -143,7 +143,17 @@ img {
   z-index: var(--z-fixed);
   background-color: #000;
 }
-
+.l-headerActive {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: #fff;
+}
+.nav__itemActive {
+  color: #000 !important;
+}
 /*===== NAV =====*/
 .nav {
   height: var(--header-height);
@@ -152,6 +162,14 @@ img {
   align-items: center;
   padding: 10px;
   background: #000;
+}
+.navActive {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #fff;
 }
 .DownloadCV {
   position: relative;

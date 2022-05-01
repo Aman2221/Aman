@@ -1,0 +1,3 @@
+user-agent : *
+
+allow : https://amansingh-web.netlify.app/

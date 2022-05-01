@@ -15,10 +15,13 @@
         <!-- ===== Fevicon ===== -->
         <link rel="icon" href="assets/img/Myimg.webp">
         <!-- ===== Font Awsome ===== -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+        
         <!-- ===== Textillate Js Animations ===== -->
         <link rel="stylesheet" href="./assets/css/animate.css">
         
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
         <!-- Google Tag Manager -->
         <script>
         (function (w, d, s, l, i) {
@@ -96,7 +99,7 @@
         </script>
         <title>| Aman Singh |</title>
     </head>
-    <body onload="fun()">
+    <body onload="initializeApp()">
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5T66NC" height="0" width="0"
                 style="display:none;visibility:hidden"></iframe></noscript>
@@ -281,10 +284,10 @@
                 <div class="contact__container bd-grid">
                     <div class="contact__info">
                         <h3 class="contact__subtitle">EMAIL</h3>
-                        <span class="contact__text">as562770@gmail.com</span>
+                        <span class="contact__text"><a href="mailto:as562770@gmail.com">Send email</a></p></span>
 
                         <h3 class="contact__subtitle">PHONE</h3>
-                        <span class="contact__text">+917678022139</span>
+                        <span class="contact__text"><a href="tel:+91 7678022139">+91 7678022139</a></p></span>
 
                         <h3 class="contact__subtitle">ADRESS</h3>
                         <span class="contact__text">India</span>
@@ -292,13 +295,13 @@
 
                     <form action="" class="contact__form">
                         <div class="contact__inputs">
-                            <input type="text" placeholder="Name" class="contact__input">
-                            <input type="mail" placeholder="Email" class="contact__input">
+                            <input type="text" placeholder="Name" class="contact__input" id="nameInput">
+                            <input type="mail" placeholder="Email" class="contact__input" id="emailInput">
                         </div>
 
-                        <textarea name="" id="" cols="0" rows="10" placeholder="Description" class="contact__input"></textarea>
+                        <textarea name="" id="messageText" cols="0" rows="10" placeholder="Description" class="contact__input"></textarea>
 
-                        <input type="submit" value="SEND" class="contact__button">
+                        <input type="button" value="SEND" class="contact__button" id="sendMessageButton">
                     </form>
                 </div>
             </section>
@@ -330,9 +333,7 @@
                     <a href="https://twitter.com/Aman23398618" class="footer__social"><i class='bx bxl-twitter' ></i></a>
                 </div>
 
-                <div class="upArrow">
-                    <a href="#home"><i class="fas fa-arrow-alt-circle-up"></i></a>
-                </div>
+                
             </div>
         </footer>
 
@@ -349,5 +350,8 @@
         <script>
               $('.about__text').textillate();
         </script>
+        
+        <!-- firebase config -->
+        
     </body>
 </html>

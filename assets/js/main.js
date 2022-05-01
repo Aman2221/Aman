@@ -78,3 +78,33 @@ sr.reveal('.contact__button', {delay: 600})
 function fun(){
     document.getElementById("loading").style.display="none";
 }
+function initializeApp() {
+    fun();
+    const firebaseConfig = {
+        apiKey: "AIzaSyDcl3eApq0iXEPetx1HQMfa7C3kOLwUIwU",
+        authDomain: "portfolio-aman.firebaseapp.com",
+        projectId: "portfolio-aman",
+        storageBucket: "portfolio-aman.appspot.com",
+        messagingSenderId: "903221669549",
+        appId: "1:903221669549:web:11b4fcec6e5d7b3c176024"
+    };
+    // Initialize Firebase
+
+    firebase.initializeApp(firebaseConfig);
+    const fireStore= firebase.firestore()
+    let submitMessage = document.getElementById('sendMessageButton');
+    // Save message to firebase
+
+    submitMessage.addEventListener("click", () => {
+        let name = document.getElementById('nameInput').value;
+        let email = document.getElementById('emailInput').value;
+        let message = document.getElementById('messageText').value;
+        fireStore.collection("Messages").add({ name, email, message}).then(() => 
+            {
+                alert('Message Sent Successfully');
+            }).catch(err => {
+                console.log('Message',err);
+            })
+    })
+}
+

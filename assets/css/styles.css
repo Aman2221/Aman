@@ -61,6 +61,7 @@
 ::before,
 ::after {
   box-sizing: border-box;
+  font-display:swap;
 }
 #loading {
   position: fixed;
@@ -72,6 +73,7 @@
 }
 html {
   scroll-behavior: smooth;
+  font-display:swap;
 }
 body {
   font-display:swap;

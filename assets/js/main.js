@@ -92,10 +92,11 @@ function initializeApp() {
 
     firebase.initializeApp(firebaseConfig);
     const fireStore= firebase.firestore()
-    let submitMessage = document.getElementById('sendMessageButton');
+    let submitForm = document.getElementById('contact__form');
     // Save message to firebase
 
-    submitMessage.addEventListener("click", () => {
+    submitForm.addEventListener("submit", (e) => {
+        e.preventDefault();
         let name = document.getElementById('nameInput').value;
         let email = document.getElementById('emailInput').value;
         let message = document.getElementById('messageText').value;

@@ -176,7 +176,8 @@
                         <span class="skills__name">SCSS</span>
                         <span class="skills__name">Javascript</span>
                         <span class="skills__name">React</span>
-                        
+                        <span class="skills__name">Git</span>
+
                         <h3 class="skills__subtitle">Design</h3>
                         <span class="skills__name">Adobe XD</span>
                         <span class="skills__name">Photoshop</span>
@@ -191,10 +192,12 @@
                         <span class="skills__name">Visual Studio</span>
                         <span class="skills__name">Node</span>
                         <span class="skills__name">NPM</span>
+                        <span class="skills__name">Formic</span>
+                        <span class="skills__name">Yup</span>
                     </div>
 
                     <div class="skills__img">
-                        <img src="assets/img/SKILL.webp" alt="skill img" loading="lazy">
+                        <img src="assets/img/skills.webp" alt="skill img" loading="lazy">
                     </div>
                 </div>
             </section>
@@ -353,15 +356,15 @@
                         <span class="contact__text">India</span>
                     </div>
 
-                    <form action="" class="contact__form">
+                    <form class="contact__form" id='contact__form' onsubmit="event.preventDefault();">
                         <div class="contact__inputs">
-                            <input type="text" placeholder="Name" class="contact__input" id="nameInput">
-                            <input type="email" placeholder="Email" class="contact__input" id="emailInput">
+                            <input type="text" placeholder="Name" class="contact__input" id="nameInput" required>
+                            <input type="email" placeholder="Email" class="contact__input" id="emailInput" required>
                         </div>
 
-                        <textarea name="" id="messageText" cols="0" rows="10" placeholder="Description" class="contact__input"></textarea>
+                        <textarea name="" id="messageText" cols="0" rows="10" placeholder="Description" class="contact__input" required></textarea>
 
-                        <input type="button" value="SEND" class="contact__button" id="sendMessageButton">
+                        <input type="submit" value="SEND" class="contact__button" id="sendMessageButton" />
                     </form>
                 </div>
             </section>

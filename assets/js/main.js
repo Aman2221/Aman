@@ -103,6 +103,9 @@ function initializeApp() {
         fireStore.collection("Messages").add({ name, email, message}).then(() => 
             {
                 alert('Message Sent Successfully');
+                let name = document.getElementById('nameInput').value = '';
+                let email = document.getElementById('emailInput').value = '';
+                let message = document.getElementById('messageText').value = '';
             }).catch(err => {
                 console.log('Message',err);
             })

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,800&display=swap');
+
+body {
+    font-family: montserrat, sans-serif;
+    background: #000;
+    color: #B0ACB3;
+    text-align: center;
+    margin: 0 !important;
+    padding: 0;
+    list-style: none;
+    border: 0;
+    -webkit-tap-highlight-color: transparent;
+    padding-top: 0%
+}
+
+svg {
+    width: 50vw;
+    max-width: 1280px;
+    overflow: visible;
+    fill: #000;
+}
+
+#oops {
+    margin: 0;
+    font-size: 6vw;
+    font-weight: 800 !important;
+    margin-top: -0.6em;
+}
+
+#who {
+    font-size: 2vw;
+    margin: 0 !important;
+}
+
+#wrong {
+    font-size: 1.2vw;
+}
+
+rect#evQrI1MWBnR3 {
+    fill: #000;
+}
+
+.homebutton {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 1em 2em;
+    margin-top: 1em;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(black, #333);
+    color: cyan;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 15px rgba(204, 200, 180, 0.1);
+
+    .homebutton:hover {
+        background-color: #00badf;
+        color: white;
+    }
+
+    .homebutton:focus {
+        outline: 0;
+    }
+
+    .homebutton:before,
+    .homebutton:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 140%;
+        height: 100%;
+        left: -20%;
+        z-index: -1000;
+    }
+}
+@media screen and (max-width:768px){
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}

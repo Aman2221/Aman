@@ -42,44 +42,54 @@ function scrollActive(){
 }
 
 /*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 2000,
-    reset: true
-})
+// const sr = ScrollReveal({
+//     origin: 'top',
+//     distance: '80px',
+//     duration: 2000,
+//     reset: true
+// })
 
 /*SCROLL HOME*/
-sr.reveal('.home__title', {})
-sr.reveal('.home__scroll', {delay: 200})
-sr.reveal('.home__img', {origin:'right', delay: 400})
+// sr.reveal('.home__title', {})
+// sr.reveal('.home__scroll', {delay: 200})
+// sr.reveal('.home__img', {origin:'right', delay: 400})
 
-/*SCROLL ABOUT*/
-sr.reveal('.about__img', {delay: 500})
-sr.reveal('.about__subtitle', {delay: 300})
-sr.reveal('.about__profession', {delay: 400})
-sr.reveal('.about__text', {delay: 500})
-sr.reveal('.about__social-icon', {delay: 600, interval: 200})
+// /*SCROLL ABOUT*/
+// sr.reveal('.about__img', {delay: 500})
+// sr.reveal('.about__subtitle', {delay: 300})
+// sr.reveal('.about__profession', {delay: 400})
+// sr.reveal('.about__text', {delay: 500})
+// sr.reveal('.about__social-icon', {delay: 600, interval: 200})
 
-/*SCROLL SKILLS*/
-sr.reveal('.skills__subtitle', {})
-sr.reveal('.skills__name', {distance: '20px', delay: 50, interval: 100})
-sr.reveal('.skills__img', {delay: 400})
+// /*SCROLL SKILLS*/
+// sr.reveal('.skills__subtitle', {})
+// sr.reveal('.skills__name', {distance: '20px', delay: 50, interval: 100})
+// sr.reveal('.skills__img', {delay: 400})
 
-/*SCROLL PORTFOLIO*/
-sr.reveal('.portfolio__img', {interval: 200})
+// /*SCROLL PORTFOLIO*/
+// sr.reveal('.portfolio__img', {interval: 200})
 
-/*SCROLL CONTACT*/
-sr.reveal('.contact__subtitle', {})
-sr.reveal('.contact__text', {interval: 200})
-sr.reveal('.contact__input', {delay: 400})
-sr.reveal('.contact__button', {delay: 600})
+// /*SCROLL CONTACT*/
+// sr.reveal('.contact__subtitle', {})
+// sr.reveal('.contact__text', {interval: 200})
+// sr.reveal('.contact__input', {delay: 400})
+// sr.reveal('.contact__button', {delay: 600})
 
-function fun(){
-    document.getElementById("loading").style.display="none";
+// function fun(){
+//     document.getElementById("loading").style.display="none";
+// }
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  if (document.documentElement.scrollTop > 500) {
+    document.getElementById("headerNav").style.background = "black";
+  }
+  if (document.documentElement.scrollTop < 500) {
+    document.getElementById("headerNav").style.background = "rgba(255,255,255,0.2";
+  }
 }
+
 function initializeApp() {
-    fun();
     const firebaseConfig = {
         apiKey: "AIzaSyDcl3eApq0iXEPetx1HQMfa7C3kOLwUIwU",
         authDomain: "portfolio-aman.firebaseapp.com",
@@ -103,12 +113,28 @@ function initializeApp() {
         fireStore.collection("Messages").add({ name, email, message}).then(() => 
             {
                 alert('Message Sent Successfully');
-                let name = document.getElementById('nameInput').value = '';
-                let email = document.getElementById('emailInput').value = '';
-                let message = document.getElementById('messageText').value = '';
+                document.getElementById('nameInput').value = '';
+                document.getElementById('emailInput').value = '';
+                document.getElementById('messageText').value = '';
             }).catch(err => {
                 console.log('Message',err);
             })
     })
+
 }
+
+document.querySelector('#lightMode').addEventListener('click', () => {
+    document.querySelector('body').classList.remove('bodyDarkBg');
+    document.querySelector('body').classList.add('bodyLightBg');
+    document.getElementById('lightBackground').classList.remove('lightBackgroundHide');
+    document.getElementById('lightBackground').classList.add('lightBackgroundShow');
+})
+
+document.querySelector('#darkMode').addEventListener('click', () => {
+    document.querySelector('body').classList.add('bodyDarkBg');
+    document.querySelector('body').classList.remove('bodyLightBg');
+    document.getElementById('lightBackground').classList.remove('lightBackgroundShow');
+    document.getElementById('lightBackground').classList.add('lightBackgroundHide');
+})
+
 

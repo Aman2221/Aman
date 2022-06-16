@@ -71,11 +71,19 @@
   background-size: cover;
   z-index: 1000;
 }
+.lightBackgroundHide{
+  display: none;
+  transition : 450ms;
+}
+.lightBackgroundShow {
+  display: flex;
+  transition: 450ms;
+}
 html {
   scroll-behavior: smooth;
   font-display:swap;
 }
-body {
+.bodyDarkBg {
   font-display:swap;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
@@ -83,7 +91,19 @@ body {
   font-weight: var(--font-medium);
   color: var(--text-color);
   line-height: 1.3;
-  background: #000;
+  transition: 1000ms;
+  background-color: #000;
+}
+.bodyLightBg{
+  background-color: none;
+  font-display: swap;
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  line-height: 1.3;
+  transition: 1000ms;
 }
 h1,
 h2,
@@ -144,7 +164,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #000;
+  background-color: rgba(255,255,255,0.2);
 }
 .l-headerActive {
   width: 100%;
@@ -164,7 +184,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background: #000;
+ 
 }
 .navActive {
   height: var(--header-height);
@@ -187,6 +207,32 @@ img {
   left: 100px;
   top: -100px;
   cursor: pointer;
+}
+#darkMode {
+  font-size: var(--small-font-size);
+  background: linear-gradient(black, #333);
+  border-radius: 0.25rem;
+  font-weight: 400;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+  color : #fff;
+  font-family: 'Poppins',serif;
+  border: none;
+  outline: none;
+}
+#lightMode {
+  font-size: var(--small-font-size);
+  background: linear-gradient(white, rgb(233, 224, 224));
+  border-radius: 0.25rem;
+  font-weight: 400;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+  color: #000;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', serif;
 }
 @media screen and (max-width: 768px) {
   .nav__menu {
@@ -239,7 +285,7 @@ img {
 /*===== HOME =====*/
 .home {
   position: relative;
-  background-color: #000;
+
   overflow: hidden;
 }
 .home__container {
@@ -361,7 +407,7 @@ img {
 
 /* ===== PORTFOLIO =====*/
 .portfolio {
-  background-color: #000;
+  background-color: none;
 }
 .portfolio__container {
   justify-items: center;
@@ -437,7 +483,7 @@ img {
 
 /* ===== FOOTER=====*/
 .footer {
-  background: #000;
+  background-color:rgba(0,0,0,0.5);
 }
 .footer__container {
   row-gap: 2rem;
@@ -567,6 +613,25 @@ img {
   }
 }
 @media screen and (max-width: 468px) {
+  .lightBackgroundHide {
+      display: none;
+    }
+  
+    .lightBackgroundShow {
+      display: none;
+    }
+  
+    body {
+      font-display: swap;
+      margin: var(--header-height) 0 0 0;
+      font-family: var(--body-font);
+      font-size: var(--normal-font-size);
+      font-weight: var(--font-medium);
+      color: var(--text-color);
+      line-height: 1.3;
+      transition: 1000ms;
+      background-color: #000;
+    }
   .home__title {
     position: relative;
     top: 40px;

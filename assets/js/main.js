@@ -116,6 +116,7 @@ function initializeApp() {
                 document.getElementById('nameInput').value = '';
                 document.getElementById('emailInput').value = '';
                 document.getElementById('messageText').value = '';
+                document.location.href = "./thankyou.html";
             }).catch(err => {
                 console.log('Message',err);
             })

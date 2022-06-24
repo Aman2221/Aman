@@ -1,0 +1,127 @@
+
+/* Color Variables */
+$color-codepen: #000;
+$color-github: #4284c0;
+$color-twitter: #2b97f1;
+$color-dribbble: #ef5a92;
+$color-instagram: #ef5a92;;
+$color-linkedin: #006599;
+$color-facebook: #3b5a9b;
+$color-whatsapp: #42bc51;
+/* Social Icon Mixin */
+@mixin social-icon($color) {
+    background: $color;
+    color: #fff;
+
+    .tooltip {
+        background: $color;
+        color: currentColor;
+
+        &:after {
+            border-top-color: $color;
+        }
+    }
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0 0.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.1);
+    &:hover {
+        color: #fff;
+
+        .tooltip {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-50%, -150%);
+        }
+    }
+
+    &:active {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+    }
+
+    &--linkedin {
+        @include social-icon($color-linkedin);
+    }
+
+    &--twitter {
+        @include social-icon($color-twitter);
+    }
+
+    &--codepen {
+        @include social-icon($color-codepen);
+    }
+
+    &--facebook {
+        @include social-icon($color-facebook);
+    }
+
+    &--instagram {
+        @include social-icon($color-instagram);
+    }
+
+    &--dribbble {
+        @include social-icon($color-dribbble);
+    }
+
+    &--github {
+        @include social-icon($color-github);
+    }
+
+    &--whatsapp {
+        @include social-icon($color-whatsapp);
+    }
+
+    i {
+        position: relative;
+        top: 1px;
+    }
+}
+
+/* Tooltips */
+.tooltip {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 0.8rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+    text-transform: uppercase;
+    transform: translate(-50%, -100%);
+    transition: all 0.3s ease;
+    z-index: 1;
+
+    &:after {
+        display: block;
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        content: "";
+        border: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: transparent;
+        transform: translate(-50%, 100%);
+    }
+}

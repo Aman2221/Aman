@@ -125,3 +125,15 @@ $color-whatsapp: #42bc51;
         transform: translate(-50%, 100%);
     }
 }
+
+@media screen and (max-width:480px){
+    .social-icons {
+        justify-content: center;
+    }
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        margin: 0 0.2rem;
+        font-size: 1rem;
+    }
+}

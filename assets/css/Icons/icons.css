@@ -198,4 +198,18 @@
   -webkit-transform: translate(-50%, 100%);
           transform: translate(-50%, 100%);
 }
+
+@media screen and (max-width: 480px) {
+  .social-icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 0.2rem;
+    font-size: 1rem;
+  }
+}
 /*# sourceMappingURL=icons.css.map */

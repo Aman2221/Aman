@@ -124,6 +124,13 @@ function initializeApp() {
 
 }
 
+window.addEventListener('load', () => {
+    document.querySelector('body').classList.remove('bodyDarkBg');
+    document.querySelector('body').classList.add('bodyLightBg');
+    document.getElementById('lightBackground').classList.remove('lightBackgroundHide');
+    document.getElementById('lightBackground').classList.add('lightBackgroundShow');
+})
+
 document.querySelector('#lightMode').addEventListener('click', () => {
     document.querySelector('body').classList.remove('bodyDarkBg');
     document.querySelector('body').classList.add('bodyLightBg');

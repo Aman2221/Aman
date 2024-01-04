@@ -1,0 +1,228 @@
+/* ===== MEDIA QUERIES =====*/
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --first-color: rgba(0, 0, 0, 0.8);
+    --m-light-black-color: rgba(0, 0, 0, 0.6);
+  }
+  .nav__link {
+    color: var(--light-black-color) !important;
+  }
+  .nav__logo {
+    color: var(--black-color);
+    font-weight: 500 !important;
+  }
+  .DownloadCV {
+    color: var(--white-color) !important;
+  }
+  .section-title {
+    color: var(--black-color);
+  }
+  .section-title::after {
+    background-color: var(--light-black-color) !important;
+  }
+
+  .companyName {
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+  .experienceCard {
+    border-left: 3px solid var(--m-light-black-color);
+    border-bottom: 4px solid var(--m-light-black-color);
+  }
+} */
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+    backdrop-filter: blur(10px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+    backdrop-filter: blur(10px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .section {
+    padding-top: 4rem;
+  }
+  .section-title {
+    margin-bottom: 3rem;
+  }
+  .section-title::after {
+    width: 64px;
+    top: 3rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1rem);
+    color: cyan;
+  }
+  .nav__list {
+    display: flex;
+  }
+  .nav__item {
+    margin-left: var(--mb-4);
+    margin-bottom: 0;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__link {
+    color: var(--white-color);
+  }
+  .nav__link:hover {
+    color: var(--white-color);
+  }
+  .active::after {
+    background-color: var(--white-color);
+  }
+
+  .home__container {
+    height: 100vh;
+    grid-template-rows: 1.7fr 1fr;
+    row-gap: 0;
+  }
+  .home__img {
+    width: 524px;
+    right: 10%;
+  }
+
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: initial;
+    padding: 4rem 0;
+  }
+  .about__img {
+    width: 200px;
+    height: 200px;
+    background: cyan;
+  }
+  .about__img img {
+    position: relative;
+    top: -10px;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+  }
+
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .portfolio__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+
+  .contact__container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .contact__form {
+    width: 380px;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 468px) {
+  .lightBackgroundHide {
+    display: none;
+  }
+
+  .lightBackgroundShow {
+    display: none;
+  }
+
+  body {
+    font-display: swap;
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+    line-height: 1.3;
+    transition: 1000ms;
+    background-color: #000;
+  }
+  .home__title {
+    position: relative;
+    top: 40px;
+    font-size: 3.8em;
+    color: cyan;
+    line-height: 1;
+    text-shadow: 3px 3px 5px rgba(255, 0, 0, 0.8);
+  }
+  .home__container img {
+    width: 70%;
+    height: 90%;
+  }
+  .about__img img {
+    position: relative;
+    top: -10px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+  }
+  .about__container p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .fa-arrow-alt-circle-up {
+    font-size: 40px;
+    color: lime;
+    text-shadow: 0px 0px 5px rgba(204, 184, 184, 0.1);
+    position: relative;
+    left: 290px;
+    top: -10px;
+  }
+  .fa-arrow-alt-circle-up:hover {
+    transform: none;
+    transition: none;
+  }
+  .section-title::after {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 2rem;
+    background-color: var(--first-color);
+  }
+  .DownloadCV {
+    top: -10px;
+    left: 0;
+  }
+}

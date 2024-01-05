@@ -1,44 +1,48 @@
-/*===== MENU SHOW =====*/ 
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+/*===== MENU SHOW =====*/
+const showMenu = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId);
 
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-}
-showMenu('nav-toggle','nav-menu')
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  }
+};
+showMenu("nav-toggle", "nav-menu");
 
 /*===== REMOVE MENU MOBILE =====*/
-const navLink = document.querySelectorAll('.nav__link')
+const navLink = document.querySelectorAll(".nav__link");
 
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show')
+function linkAction() {
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.remove("show");
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
+navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /*===== SCROLL SECTIONS ACTIVE LINK =====*/
-const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll("section[id]");
 
-window.addEventListener('scroll', scrollActive)
+window.addEventListener("scroll", scrollActive);
 
-function scrollActive(){
-    const scrollY = window.pageYOffset
+function scrollActive() {
+  const scrollY = window.pageYOffset;
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
-        }
-    })
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.add("active");
+    } else {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.remove("active");
+    }
+  });
 }
 
 /*===== SCROLL REVEAL ANIMATION =====*/
@@ -78,71 +82,86 @@ function scrollActive(){
 // function fun(){
 //     document.getElementById("loading").style.display="none";
 // }
-window.onscroll = function() {myFunction()};
+window.onscroll = function () {
+  myFunction();
+};
 
 function myFunction() {
   if (document.documentElement.scrollTop > 500) {
     document.getElementById("headerNav").style.background = "black";
   }
   if (document.documentElement.scrollTop < 500) {
-    document.getElementById("headerNav").style.background = "rgba(255,255,255,0.2";
+    document.getElementById("headerNav").style.background =
+      "rgba(255,255,255,0.2";
   }
 }
 
 function initializeApp() {
-    const firebaseConfig = {
-        apiKey: "AIzaSyDcl3eApq0iXEPetx1HQMfa7C3kOLwUIwU",
-        authDomain: "portfolio-aman.firebaseapp.com",
-        projectId: "portfolio-aman",
-        storageBucket: "portfolio-aman.appspot.com",
-        messagingSenderId: "903221669549",
-        appId: "1:903221669549:web:11b4fcec6e5d7b3c176024"
-    };
-    // Initialize Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyDcl3eApq0iXEPetx1HQMfa7C3kOLwUIwU",
+    authDomain: "portfolio-aman.firebaseapp.com",
+    projectId: "portfolio-aman",
+    storageBucket: "portfolio-aman.appspot.com",
+    messagingSenderId: "903221669549",
+    appId: "1:903221669549:web:11b4fcec6e5d7b3c176024",
+  };
+  // Initialize Firebase
 
-    firebase.initializeApp(firebaseConfig);
-    const fireStore= firebase.firestore()
-    let submitForm = document.getElementById('contact__form');
-    // Save message to firebase
+  firebase.initializeApp(firebaseConfig);
+  const fireStore = firebase.firestore();
+  let submitForm = document.getElementById("contact__form");
+  // Save message to firebase
 
-    submitForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        let name = document.getElementById('nameInput').value;
-        let email = document.getElementById('emailInput').value;
-        let message = document.getElementById('messageText').value;
-        fireStore.collection("Messages").add({ name, email, message}).then(() => 
-            {
-                alert('Message Sent Successfully');
-                document.getElementById('nameInput').value = '';
-                document.getElementById('emailInput').value = '';
-                document.getElementById('messageText').value = '';
-                document.location.href = "./thankyou.html";
-            }).catch(err => {
-                console.log('Message',err);
-            })
-    })
-
+  submitForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let name = document.getElementById("nameInput").value;
+    let email = document.getElementById("emailInput").value;
+    let message = document.getElementById("messageText").value;
+    fireStore
+      .collection("Messages")
+      .add({ name, email, message })
+      .then(() => {
+        alert("Message Sent Successfully");
+        document.getElementById("nameInput").value = "";
+        document.getElementById("emailInput").value = "";
+        document.getElementById("messageText").value = "";
+        document.location.href = "./thankyou.html";
+      })
+      .catch((err) => {
+        console.log("Message", err);
+      });
+  });
 }
 
-window.addEventListener('load', () => {
-    document.querySelector('body').classList.remove('bodyDarkBg');
-    document.querySelector('body').classList.add('bodyLightBg');
-    document.getElementById('lightBackground').classList.remove('lightBackgroundHide');
-    document.getElementById('lightBackground').classList.add('lightBackgroundShow');
-})
+window.addEventListener("load", () => {
+  document.querySelector("body").classList.remove("bodyDarkBg");
+  document.querySelector("body").classList.add("bodyLightBg");
+  document
+    .getElementById("lightBackground")
+    .classList.remove("lightBackgroundHide");
+  document
+    .getElementById("lightBackground")
+    .classList.add("lightBackgroundShow");
+});
 
-document.querySelector('#lightMode').addEventListener('click', () => {
-    document.querySelector('body').classList.remove('bodyDarkBg');
-    document.querySelector('body').classList.add('bodyLightBg');
-    document.getElementById('lightBackground').classList.remove('lightBackgroundHide');
-    document.getElementById('lightBackground').classList.add('lightBackgroundShow');
-})
+document.querySelector("#lightMode").addEventListener("click", () => {
+  document.querySelector("body").classList.remove("bodyDarkBg");
+  document.querySelector("body").classList.add("bodyLightBg");
+  document
+    .getElementById("lightBackground")
+    .classList.remove("lightBackgroundHide");
+  document
+    .getElementById("lightBackground")
+    .classList.add("lightBackgroundShow");
+});
 
-document.querySelector('#darkMode').addEventListener('click', () => {
-    document.querySelector('body').classList.add('bodyDarkBg');
-    document.querySelector('body').classList.remove('bodyLightBg');
-    document.getElementById('lightBackground').classList.remove('lightBackgroundShow');
-    document.getElementById('lightBackground').classList.add('lightBackgroundHide');
-})
-
-
+document.querySelector("#darkMode").addEventListener("click", () => {
+  document.querySelector("body").classList.add("bodyDarkBg");
+  document.querySelector("body").classList.remove("bodyLightBg");
+  document
+    .getElementById("lightBackground")
+    .classList.remove("lightBackgroundShow");
+  document
+    .getElementById("lightBackground")
+    .classList.add("lightBackgroundHide");
+});

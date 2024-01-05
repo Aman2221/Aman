@@ -1,10 +1,9 @@
-
 /* Color Variables */
 $color-codepen: #000;
 $color-github: #4284c0;
 $color-twitter: #2b97f1;
 $color-dribbble: #ef5a92;
-$color-instagram: #ef5a92;;
+$color-instagram: #ef5a92;
 $color-linkedin: #006599;
 $color-facebook: #3b5a9b;
 $color-whatsapp: #42bc51;
@@ -26,6 +25,7 @@ $color-whatsapp: #42bc51;
 /* Social Icons */
 .social-icons {
     display: flex;
+    margin-top: 40px;
 }
 
 .social-icon {
@@ -126,7 +126,7 @@ $color-whatsapp: #42bc51;
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width: 480px) {
     .social-icons {
         justify-content: center;
     }

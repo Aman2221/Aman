@@ -195,6 +195,7 @@ img {
   background: #fff;
 }
 .DownloadCV {
+  border: 1px solid transparent;
   position: relative;
   font-size: var(--small-font-size);
   margin-right: var(--mb-2);
@@ -341,6 +342,18 @@ img {
   display: block;
   margin-bottom: var(--mb-4);
 }
+.about__container > div > ol {
+  padding: 0;
+  padding-left: 15px;
+  margin: 0;
+}
+.about__container > div > ol > li:first-child,
+.about__container > div > ol > li:nth-child(1) {
+  margin-top: 0;
+}
+.about__container > div > ol > li {
+  margin-top: 10px;
+}
 .about__container p {
   font-size: 18px;
   line-height: 30px;
@@ -372,8 +385,7 @@ img {
   padding-right: 20px;
   padding-top: 10px;
   border-radius: 15px;
-  border-left: 3px solid cyan;
-  border-bottom: 4px solid cyan;
+  background: rgba(0, 0, 0, 0.2);
 }
 .skills__name {
   display: inline-block;
